@@ -1,3 +1,34 @@
+// Preloader — hides once the page (fonts, CSS, images) has fully loaded.
+// Smooths out the flash-of-unstyled-content on every visit. Note: this can't
+// mask the free-tier cold-start delay itself (that happens before any HTML
+// arrives) — see README for the uptime-pinger fix for that.
+const preloader = document.getElementById('preloader');
+if (preloader) {
+    const hidePreloader = () => preloader.classList.add('hidden');
+    if (document.readyState === 'complete') {
+        hidePreloader();
+    } else {
+        window.addEventListener('load', hidePreloader);
+        // Safety net: never block the page for more than 2.5s even if a
+        // slow-loading asset (e.g. a font) stalls the 'load' event.
+        setTimeout(hidePreloader, 2500);
+    }
+}
+
+// Scroll progress bar
+const scrollProgress = document.getElementById('scroll-progress');
+if (scrollProgress) {
+    const updateProgress = () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        scrollProgress.style.width = pct + '%';
+    };
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+}
+
 // Mobile nav toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
