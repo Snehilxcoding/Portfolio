@@ -1,0 +1,13 @@
+{
+  "name": "snehil-verma-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio site for Snehil Verma with a working contact form (via Web3Forms).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
