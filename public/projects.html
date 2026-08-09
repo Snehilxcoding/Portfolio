@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <div id="preloader"><div class="wrap"><div class="mark">SV<span>.</span></div><div class="ring"></div></div></div>
     <div id="scroll-progress"></div>
     <div class="bg-mesh"></div>
@@ -37,7 +38,7 @@
         <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     </nav>
 
-    <div class="page-header reveal">
+    <div id="main-content" class="page-header reveal">
         <div class="eyebrow"><span class="dot"></span>Projects</div>
         <h1>Selected work</h1>
         <p>End-to-end builds spanning AI-powered applications and machine learning — from model to interface.</p>
@@ -49,24 +50,49 @@
                 <span class="status-pill">Ongoing</span>
                 <h3>AlfredWayne OS</h3>
                 <div class="stack-line">Python · FastAPI · LLM APIs · NLP · Speech-to-Text · Text-to-Speech</div>
-                <ul>
-                    <li>Developed an AI-powered personal assistant for intelligent task automation and natural text/voice interactions.</li>
-                    <li>Designed a modular, scalable architecture with contextual memory and seamless third-party service integration.</li>
-                    <li>Applicable to enterprise productivity platforms, customer support automation, smart assistants, and IoT-based voice applications.</li>
-                </ul>
-                <a href="https://github.com/Snehilxcoding/AlfredWayneOS" target="_blank" rel="noopener" class="project-link">View on GitHub &rarr;</a>
+                <div class="case-study">
+                    <div class="case-block">
+                        <span class="case-label">Problem</span>
+                        <p>Everyday digital tasks — scheduling, file management, app control — are scattered across separate tools and interfaces, and hands-free interaction with a personal system is mostly locked inside fixed voice-assistant ecosystems.</p>
+                    </div>
+                    <div class="case-block">
+                        <span class="case-label">Approach</span>
+                        <p>Built a modular AI assistant integrating LLM APIs for natural language understanding with Speech-to-Text and Text-to-Speech for voice interaction, backed by a FastAPI service layer. Designed with contextual memory so the assistant retains context across a conversation instead of treating every input in isolation.</p>
+                    </div>
+                    <div class="case-block">
+                        <span class="case-label">Status</span>
+                        <p>Actively in development — currently supports natural text/voice task automation on a modular architecture built to extend into productivity, customer support, and IoT-based use cases.</p>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Snehilxcoding/AlfredWayneOS" target="_blank" rel="noopener" class="project-link">View on GitHub &rarr;</a>
+                </div>
             </div>
             <div class="card">
                 <span class="status-pill">Complete</span>
                 <h3>Heart Disease Predictor</h3>
                 <div class="stack-line">Python · Pandas · NumPy · Scikit-learn · Matplotlib · Streamlit</div>
-                <ul>
-                    <li>Developed a machine learning model using the Heart Disease UCI dataset to predict heart disease risk through data preprocessing and exploratory data analysis.</li>
-                    <li>Built and evaluated a Logistic Regression model, achieving 89% accuracy.</li>
-                    <li>Developed an interactive Streamlit web application for real-time heart disease prediction and model visualization.</li>
-                </ul>
-                <a href="https://snehil-hdp-hewxas4eqvso3vusfnhaxn.streamlit.app/" target="_blank" rel="noopener" class="project-link">Live Demo &rarr;</a>
-                <a href="https://github.com/Snehilxcoding/Heart-Disease-Predictor-" target="_blank" rel="noopener" class="project-link" style="margin-left: 20px;">View on GitHub &rarr;</a>
+                <div class="demo-preview">
+                    <img src="/images/heart-predictor-preview.png" alt="Heart Disease Predictor live app showing model stats: ~1K training records, Logistic Regression model, 26 features, 89.13% accuracy" loading="lazy">
+                </div>
+                <div class="case-study">
+                    <div class="case-block">
+                        <span class="case-label">Problem</span>
+                        <p>Heart disease risk depends on dozens of interacting clinical variables — assessing it manually requires domain expertise that most people don't have easy access to.</p>
+                    </div>
+                    <div class="case-block">
+                        <span class="case-label">Approach</span>
+                        <p>Cleaned and preprocessed the UCI Heart Disease dataset (~1,000 patient records, 26 features after encoding), performed exploratory data analysis to identify the strongest risk indicators, then trained and evaluated a Logistic Regression model before wrapping it in a Streamlit interface so predictions are usable without touching any code.</p>
+                    </div>
+                    <div class="case-block">
+                        <span class="case-label">Outcome</span>
+                        <p>89.13% prediction accuracy, deployed as a live, publicly usable tool — not just a notebook.</p>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="https://snehil-hdp-hewxas4eqvso3vusfnhaxn.streamlit.app/" target="_blank" rel="noopener" class="project-link">Live Demo &rarr;</a>
+                    <a href="https://github.com/Snehilxcoding/Heart-Disease-Predictor-" target="_blank" rel="noopener" class="project-link">View on GitHub &rarr;</a>
+                </div>
             </div>
         </div>
     </section>
@@ -74,5 +100,7 @@
     <footer>&copy; 2026 Snehil Verma. All rights reserved.</footer>
 
     <script src="/js/main.js"></script>
+    <!-- Visitor analytics (privacy-friendly, no cookies) — replace YOURCODE with your GoatCounter code after signup -->
+    <script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
